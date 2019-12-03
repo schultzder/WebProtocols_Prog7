@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="schultzder_Prog6.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style2 {
+            text-align: center;
+            color: #0000FF;
+            text-decoration: underline;
+        }
+        .auto-style3 {
+            text-align: center;
+            color: #000000;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+            <h1 class="auto-style2">Web Protocols, Technologies and Applications </h1>
+    <h2 class="auto-style3">Derek Schultz</h2>
+            <p class="auto-style3">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
+            </p>
+          
+       <ul class="navbar">
+           
+            
+           <asp:TreeView ID="TreeView1" runat="server" ImageSet="Arrows">
+               <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+               <Nodes>
+                   <asp:TreeNode Text="UWP CS 3870" Value="UWP CS 3870">
+                       <asp:TreeNode Text="Create User" Value="Create User"></asp:TreeNode>
+                   </asp:TreeNode>
+                   <asp:TreeNode Text="Prog 6" Value="Prog 6">
+                       <asp:TreeNode Text="Admin" Value="Admin">
+                           <asp:TreeNode NavigateUrl="~/SetRoles.aspx" Text="Set Roles" Value="Set Roles"></asp:TreeNode>
+                           <asp:TreeNode NavigateUrl="~/Update.aspx" Text="Updating" Value="Updating"></asp:TreeNode>
+                       </asp:TreeNode>
+                       <asp:TreeNode Text="Member" Value="Member">
+                           <asp:TreeNode NavigateUrl="~/Shopping.aspx" Text="Shopping" Value="Shopping"></asp:TreeNode>
+                           <asp:TreeNode Text="Checkout" Value="Checkout"></asp:TreeNode>
+                       </asp:TreeNode>
+                   </asp:TreeNode>
+                   <asp:TreeNode Text="Prog7" Value="Prog7">
+                       <asp:TreeNode Text="Admin" Value="Updating">
+                           <asp:TreeNode NavigateUrl="~/Update.aspx" Text="Updating" Value="Updating"></asp:TreeNode>
+                       </asp:TreeNode>
+                       <asp:TreeNode Text="Member" Value="Member">
+                           <asp:TreeNode NavigateUrl="~/Shopping.aspx" Text="Shopping" Value="Shopping"></asp:TreeNode>
+                           <asp:TreeNode NavigateUrl="~/Checkout.aspx" Text="Checkout" Value="Checkout"></asp:TreeNode>
+                       </asp:TreeNode>
+                   </asp:TreeNode>
+               </Nodes>
+               <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+               <ParentNodeStyle Font-Bold="False" />
+               <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+           </asp:TreeView>
+           
+            
+</ul>
+        
+
+<div>
+	<div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
+</div>
+    </div>
+    </form>
+</body>
+</html>

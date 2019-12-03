@@ -1,0 +1,2 @@
+J:\Web Protocols\schultzder_Prog6\schultzder_Prog6\schultzder_Prog6\obj\Debug\schultzder_Prog6.csprojResolveAssemblyReference.cache
+J:\Web Protocols\schultzder_Prog6\schultzder_Prog6\schultzder_Prog6\obj\Debug\schultzder_Prog6.csproj.CoreCompileInputs.cache
